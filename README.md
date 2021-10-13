@@ -1,8 +1,19 @@
 # Metawork tooling slow-down repro
 
-Issue: (husky)[https://www.npmjs.com/package/husky] pre-commit and pre-push hooks are slow when `mw` is running.
+Issue: Linting appears to be slow when `mw` is running.
+
+Linting is only performed on source code:
+
+```
+# .eslintignore 
+
+**/node_modules/*
+**/out/*
+**/.next/*
+```
+
+## Repro steps:
 
 1. Make sure `mw` is running with node installed
-2. Make some changes to this code and stage the changes with git: `git add .`
-3. Commit the changes: `git commit -m "Import changes"` - There should be a significant delay before there's any output from the command. Optionally, try pushing code - tooling will run before git executes. This tooling should also be very slow with `mw` running.
-4. Repeat with `mw` turned off (or uninstalled, in my case). There should be no significant delay after comitting or pushing.
+2. run `yarn lint`. It should be very slow.
+3. Disable `mw` and run `yarn lint` again. It should be much faster.

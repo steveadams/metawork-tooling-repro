@@ -37,28 +37,13 @@ const Example: FC = () => {
               </Step>
               <Step>
                 <p>
-                  2. Make some changes to this code and stage the changes with
-                  git: <Pre>git add .</Pre>
+                  run <Pre>yarn lint</Pre>. It should be very slow.
                 </p>
               </Step>
               <Step>
                 <p>
-                  3. Commit the changes:{' '}
-                  <Pre>git commit -m &quot;Import changes&quot;</Pre>
-                </p>
-                <br />
-                <p>
-                  There should be a significant delay before there&apos;s any
-                  output from the command. Optionally, try pushing code -
-                  tooling will run before git executes. This tooling should also
-                  be very slow with <Pre>mw</Pre> running.
-                </p>
-              </Step>
-              <Step>
-                <p>
-                  4. Repeat with <Pre>mw</Pre> turned off (or uninstalled, in my
-                  case). There should be no significant delay after comitting or
-                  pushing.
+                  Disable <Pre>mw</Pre> and run <Pre>yarn lint</Pre> again. It
+                  should be much faster.
                 </p>
               </Step>
             </section>
