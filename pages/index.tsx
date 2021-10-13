@@ -66,7 +66,7 @@ const Example: FC = () => {
         </div>
       </main>
       <footer className="flex-shrink-0 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="flex justify-center space-x-4">Test test</nav>
+        <nav className="flex justify-center space-x-4">Test test test</nav>
       </footer>
     </div>
   );
